@@ -29,7 +29,6 @@ namespace Schedule.API.Controllers
             _config = config;
         }
 
-        [Authorize]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterDTO userRegisterDTO)
         {
@@ -81,10 +80,9 @@ namespace Schedule.API.Controllers
             });
         }
 
-        public string GetCircle()
+        public string MainMessage()
         {
-            Shape c = new Circle("Some Circle", 7.5);
-            return c.ToString();
+            return "Welcome to API";
         }
 
     }
